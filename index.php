@@ -6,7 +6,7 @@
     $link_producto = "paginas/producto.php";
 	$link_cliente = "paginas/cliente.php";  
 	
-	/*Programador sis.1*/
+	/*Programador sis.1 2*/
 ?>
 
 <!DOCTYPE html>
