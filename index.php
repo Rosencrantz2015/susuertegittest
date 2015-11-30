@@ -7,6 +7,7 @@
 	$link_cliente = "paginas/cliente.php";  
 	
 	/*Programador sis.1 2*/
+	/*Agregando comentaro para subir a GitHUb*/
 ?>
 
 <!DOCTYPE html>
