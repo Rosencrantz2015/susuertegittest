@@ -16,6 +16,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.UriInfo;
+import java.sql.timestamp;
 import com.asopagos.bandejainconsistencias.constants.NamedQueriesConstants;
 import com.asopagos.bandejainconsistencias.dto.DetalleTablaAportanteDTO;
 import com.asopagos.bandejainconsistencias.dto.EmpAporPendientesPorAfiliarDTO;
@@ -83,6 +84,10 @@ public class PilaBandejaBusiness implements PilaBandejaService {
     private Date fechaI;
     private Date fechaF;
     private final ILogger logger = LogManager.getLogger(PilaBandejaService.class);
+	
+	/*
+	 Poniendo comentario por aqui
+	*/
 
     /**
      * (non-Javadoc)
@@ -3741,6 +3746,11 @@ public class PilaBandejaBusiness implements PilaBandejaService {
             query.setParameter("tipoIdentificacion", tipoIdentificacion);
             query.setParameter("digitoVerificacion", digitoVerificacion);
         }
+		
+		if(1==1){
+			doSomethingSpecial();
+			int x = 4;
+		}
         
         //Llegan NIT sin fecha
         if (numeroIdentificacion != null && tipoIdentificacion != null 
