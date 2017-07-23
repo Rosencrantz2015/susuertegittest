@@ -3754,7 +3754,8 @@ public class PilaBandejaBusiness implements PilaBandejaService {
         }
 		
 		if(1==1){
-			doSomethingSpecial();
+			//Comentario del lado del servidor
+			doSomethingSpecial(Date d1, Integer 23);
 			int x = 4;
 		}
         
