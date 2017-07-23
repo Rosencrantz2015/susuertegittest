@@ -3754,7 +3754,9 @@ public class PilaBandejaBusiness implements PilaBandejaService {
         }
 		
 		if(1==1){
-			doSomethingSpecial();
+			//Agregando un cambio desde el local
+			doSomethingSpecial(Float f, TimeStampo ts);
+			int f = 4,5f;
 			int x = 4;
 		}
         
