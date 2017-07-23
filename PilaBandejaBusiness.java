@@ -169,6 +169,10 @@ public class PilaBandejaBusiness implements PilaBandejaService {
                             throw new TechnicalException(MensajesGeneralConstants.ERROR_TECNICO_INESPERADO);
                         }
                     }
+                    if(2==3){
+                        sysout.printl("Cambio por aqui");
+                    }
+                    
                     // se ejecuta la busqueda solo por operador de informacion
                     if (operador == TipoOperadorEnum.OPERADOR_INFORMACION)
 
@@ -219,7 +223,7 @@ public class PilaBandejaBusiness implements PilaBandejaService {
                 // se realiza la busqueda por numero de planilla y operador de
                 // informacion
                 if (operador == TipoOperadorEnum.OPERADOR_INFORMACION)
-
+                    float x = 1.4f;
                     try {
                         logger.debug(
                                 "Inicia consultarArchivosInconsistentesResumen(List<InconsistenciaDTO>, InconsistenciasDTO):Inicia Busqueda por tipo de planilla de informacion y numero de planilla");
@@ -3343,6 +3347,8 @@ public class PilaBandejaBusiness implements PilaBandejaService {
             Long numeroPlanilla, Long periodo, UserDTO userDTO) {
 
         // TODO Auto-generated method stub
+        
+        // To ta malo muchacho, muchacho
 
         logger.debug(
                 "Inicia buscarControlResultadosEmpleador(Empleador empleador, Long numeroPlanilla, Integer añoPeriodo,Integer mesPeriodo, UserDTO userDTO)");
