@@ -3868,6 +3868,15 @@ public class PilaBandejaBusiness implements PilaBandejaService {
     //guardar guardarempCeroBandeja insert con el numero de radicado y el usuario que viene pro contexto @Context UserDTO userDTO; registrovigente = true;
 	
 	public static void anotherDamnMethod(String a, String b){
+		//Consulta 
+		empleadoresCero = entityManagerCore.createNamedQuery(NamedQueriesConstants.BUSQUEDA_EMPLEADOR_CERO_TRABAJADORES_ACTIVOS)
+		    .setParameter("nombreEmpresa", nombreEmpresa) 
+		    .setParameter("numeroIdentificacion", numeroIdentificacion)
+		    .setParameter("tipoIdentificacion", tipoIdentificacion)
+		    .setParameter("digitoVerificacion", digitoVerificacion)
+		    .setParameter("fechaInicioIngresoBandeja", fecIniEntradaBandeja)
+		    .setParameter("fechaFinIngresoBandeja", fecFinEntradaBandeja).getResultList();
+
 		
 		// Cuando no llegan parametros
 		public static final String BUSQUEDA_EMPLEADOR_CERO_TRABAJADORES_ACTIVOS = "PilaBandejaService.Empleador.BusquedaEmpleadorCeroTrabajadoresActivos";
