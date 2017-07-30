@@ -3846,5 +3846,15 @@ public class PilaBandejaBusiness implements PilaBandejaService {
     //actualizar RegistroAnteriorBandejaEp idReg set registroVigente = false;
     
     //guardar guardarempCeroBandeja insert con el numero de radicado y el usuario que viene pro contexto @Context UserDTO userDTO; registrovigente = true;
+	
+	public static void anotherDamnMethod(String a, String b){
+		
+		// Cuando no llegan parametros
+		public static final String BUSQUEDA_EMPLEADOR_CERO_TRABAJADORES_ACTIVOS = "PilaBandejaService.Empleador.BusquedaEmpleadorCeroTrabajadoresActivos";
+		// Busqueda de los RolAfiliado que han sido retirados por PILA
+		public static final String BUSQUEDA_ROL_AFILIADO_RETIRADO_POR_PILA = "PilaBandejaService.Empleador.BusquedaRolAfiliadoRetiradoPorPila";
+		// Actualizar la fecha de gestion del empleador
+		public static final String ACTUALIZAR_FECHA_GESTION_EMPLEADOR= "PilaBandejaService.Empleador.ActualizarFechaGestionEmpleador";
+	}
     
 }
