@@ -3868,7 +3868,25 @@ public class PilaBandejaBusiness implements PilaBandejaService {
     //guardar guardarempCeroBandeja insert con el numero de radicado y el usuario que viene pro contexto @Context UserDTO userDTO; registrovigente = true;
 	
 	public static void anotherDamnMethod(String a, String b){
-		
+
+        // Preparar fecha inicio fecha fin
+        if(fechaInicioIngresoBandeja != null || fechaFinIngresoBandeja !=null){
+             //Llegan ambas fechas
+            if(fechaInicioIngresoBandeja != null && fechaFinIngresoBandeja != null){
+                fecIniEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaInicioIngresoBandeja));
+                fecFinEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaFinIngresoBandeja));
+            // Llega inicio sola (tomar fecha actual como fecha fin)    
+            }else if (fechaInicioIngresoBandeja != null && fechaFinIngresoBandeja == null){
+                fecIniEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaInicioIngresoBandeja));
+                fecFinEntradaBandeja = CalendarUtils.truncarHora(new Date());
+            //Llega fecha fin sola (consultar todos los registros hasta fecha fin)   
+            }else{
+                fecIniEntradaBandeja = CalendarUtils.truncarHora(new GregorianCalendar(1900,1,1).getTime());
+                fecFinEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaFinIngresoBandeja));
+            }
+        }
+
+	
 		// Cuando no llegan parametros
 		public static final String BUSQUEDA_EMPLEADOR_CERO_TRABAJADORES_ACTIVOS = "PilaBandejaService.Empleador.BusquedaEmpleadorCeroTrabajadoresActivos";
 		// Busqueda de los RolAfiliado que han sido retirados por PILA
