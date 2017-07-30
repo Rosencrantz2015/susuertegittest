@@ -100,7 +100,27 @@ public class PilaBandejaBusiness implements PilaBandejaService {
     @Override
     public List<InconsistenciaDTO> consultarArchivosInconsistentesResumen(TipoIdentificacionEnum tipoIdentificacion, Long numeroPlanilla,
             Long fechaInicio, Long fechaFin, String numeroIdentificacion, TipoOperadorEnum operador, Short digitoVerificacion) {
-
+	   
+	// Inicio Control de cambios robin
+    // consultas para HU 403 y 404
+    /**
+     * Consultas 403: Buscar empleadores con estado No formalizado – sin afiliación con aportes
+     * y No formalizado – retirado con aportes
+     */
+    // Cuando no llegan parametros
+    public static final String BUSQUEDA_APORTANTES_PENDIENTES_POR_AFILIAR = "PilaBandejaService.Empleador.BusquedaEmpleadorSinAfiliar";
+    /**
+     * Consultas 404: Bandeja empleador cero trabajadores activos
+     */
+    // Cuando no llegan parametros
+    public static final String BUSQUEDA_EMPLEADOR_CERO_TRABAJADORES_ACTIVOS = "PilaBandejaService.Empleador.BusquedaEmpleadorCeroTrabajadoresActivos";
+    // Busqueda de los RolAfiliado que han sido retirados por PILA
+    public static final String BUSQUEDA_ROL_AFILIADO_RETIRADO_POR_PILA = "PilaBandejaService.Empleador.BusquedaRolAfiliadoRetiradoPorPila";
+    // Actualizar la fecha de gestion del empleador
+    public static final String ACTUALIZAR_FECHA_GESTION_EMPLEADOR= "PilaBandejaService.Empleador.ActualizarFechaGestionEmpleador";
+    // Fin Control de cambios robin		    
+	    
+	    
         logger.debug(
                 "Inicia consultarArchivosInconsistentesResumen(List<InconsistenciaDTO>, InconsistenciasDTO):Inicia Busqueda, recursos  encontrados");
         /**
