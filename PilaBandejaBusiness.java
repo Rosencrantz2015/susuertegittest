@@ -3883,6 +3883,9 @@ public class PilaBandejaBusiness implements PilaBandejaService {
             if(fechaInicioIngresoBandeja != null && fechaFinIngresoBandeja != null){
                 fecIniEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaInicioIngresoBandeja));
                 fecFinEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaFinIngresoBandeja));
+            if(fechaInicioIngresoBandeja != null && fechaFinIngresoBandeja != null){
+                fecIniEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaInicioIngresoBandeja));
+                fecFinEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaFinIngresoBandeja));				
             // Llega inicio sola (tomar fecha actual como fecha fin)    
             }else if (fechaInicioIngresoBandeja != null && fechaFinIngresoBandeja == null){
                 fecIniEntradaBandeja = CalendarUtils.truncarHora(new Date(fechaInicioIngresoBandeja));
