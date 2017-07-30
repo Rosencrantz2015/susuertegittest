@@ -9,6 +9,7 @@ import java.util.Date;
 import java.sql.PreparedStatement;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.StringJoiner;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
