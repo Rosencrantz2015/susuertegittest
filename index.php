@@ -10,6 +10,7 @@
 	/*Agregando comentaro para subir a GitHUb*/
 
 	// this is a php command
+	// another comment added
 ?>
 
 <!DOCTYPE html>
