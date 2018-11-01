@@ -32,7 +32,7 @@
 <body>
     <?php require_once("snipets/html/menu_principal.php")?>
     
-    <!-- Contenido de la pagina -->
+    <!-- Contenido de la pagina editado porque si! -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
