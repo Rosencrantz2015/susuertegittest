@@ -8,6 +8,8 @@
 	
 	/*Programador sis.1 2*/
 	/*Agregando comentaro para subir a GitHUb*/
+
+	// this is a php command
 ?>
 
 <!DOCTYPE html>
